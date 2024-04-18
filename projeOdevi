@@ -1,0 +1,83 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyML2aweakI2yyTyH9lPCekR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sevallamia/hu_bby162_2024/blob/main/projeOdevi\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A9RB2Wr5W1MB",
+        "outputId": "ebbb73f2-212e-4c11-a81b-7f2925a49d1f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'pınar': 'yerden kaynayarak çıkan su, kaynak', 'tabak': 'yemek için kullanılan, içine yemek konulan, derinliği az, yayvan kap', 'eldiven': 'elleri dış etkilerden korumak için giyilen yün örgü, kumaş, deri ya da kauçuktan yapılan el giyeceği', 'mülki idare': ' il ve ilçe yönetimi', 'kapı': 'açılıp kapanan kanat', 'tuz': 'kokusuz,suda eriyen, yiyeceklerikorumada ve tatlandırmada kullanılan billursu madde', 'küpe': 'kulak memelerine takılan süs eşyası', ' kolye': 'ucuna süs eşyası konularak boyna takılan takı', 'ruj': ' dudakları boyamak için kullanılan kokulu, renkli madde', 'ses': 'kulağın duyabildiği titreşim'}\n",
+            "sözlüğe yeni bir kelime giriniz:baston\n",
+            "girmiş olduğunuz kelimenin anlamını giriniz:değnek\n",
+            "sözlükten silmek istediğininz kelimeyi giriniz: eldiven\n",
+            "silinecek kelime : elleri dış etkilerden korumak için giyilen yün örgü, kumaş, deri ya da kauçuktan yapılan el giyeceği\n",
+            "silmek istediğiniz kelime silindi\n",
+            "{'pınar': 'yerden kaynayarak çıkan su, kaynak', 'tabak': 'yemek için kullanılan, içine yemek konulan, derinliği az, yayvan kap', 'mülki idare': ' il ve ilçe yönetimi', 'kapı': 'açılıp kapanan kanat', 'tuz': 'kokusuz,suda eriyen, yiyeceklerikorumada ve tatlandırmada kullanılan billursu madde', 'küpe': 'kulak memelerine takılan süs eşyası', ' kolye': 'ucuna süs eşyası konularak boyna takılan takı', 'ruj': ' dudakları boyamak için kullanılan kokulu, renkli madde', 'ses': 'kulağın duyabildiği titreşim', 'yenikelime': 'kelimeanlamı'}\n",
+            "güncellemek istediğiniz kelimeyi girirniz: tabak\n",
+            " güncellenecek kelime: yemek için kullanılan, içine yemek konulan, derinliği az, yayvan kap\n",
+            " güncel kelime bilgisi girinizyemek\n",
+            "güncelleme tamamlandı\n",
+            "{'pınar': 'yerden kaynayarak çıkan su, kaynak', 'tabak': 'yemek', 'mülki idare': ' il ve ilçe yönetimi', 'kapı': 'açılıp kapanan kanat', 'tuz': 'kokusuz,suda eriyen, yiyeceklerikorumada ve tatlandırmada kullanılan billursu madde', 'küpe': 'kulak memelerine takılan süs eşyası', ' kolye': 'ucuna süs eşyası konularak boyna takılan takı', 'ruj': ' dudakları boyamak için kullanılan kokulu, renkli madde', 'ses': 'kulağın duyabildiği titreşim', 'yenikelime': 'kelimeanlamı'}\n",
+            "aramak istediğiniz kelimeyi girirniz: ruj\n",
+            " dudakları boyamak için kullanılan kokulu, renkli madde\n"
+          ]
+        }
+      ],
+      "source": [
+        "sözlük= {\"pınar\":\"yerden kaynayarak çıkan su, kaynak\", \"tabak\": \"yemek için kullanılan, içine yemek konulan, derinliği az, yayvan kap\", \"eldiven\" : \"elleri dış etkilerden korumak için giyilen yün örgü, kumaş, deri ya da kauçuktan yapılan el giyeceği\" , \"mülki idare\": \" il ve ilçe yönetimi\", \"kapı\": \"açılıp kapanan kanat\", \"tuz\": \"kokusuz,suda eriyen, yiyeceklerikorumada ve tatlandırmada kullanılan billursu madde\", \"küpe\": \"kulak memelerine takılan süs eşyası\", \" kolye\": \"ucuna süs eşyası konularak boyna takılan takı\", \"ruj\": \" dudakları boyamak için kullanılan kokulu, renkli madde\", \"ses\": \"kulağın duyabildiği titreşim\" }\n",
+        "print(sözlük)\n",
+        "yenikelime= input(\"sözlüğe yeni bir kelime giriniz:\")\n",
+        "kelimeanlamı= input(\"girmiş olduğunuz kelimenin anlamını giriniz:\")\n",
+        "sözlük[\"yenikelime\"]= \"kelimeanlamı\"\n",
+        "silinecek= input(\"sözlükten silmek istediğininz kelimeyi giriniz: \")\n",
+        "print(\"silinecek kelime : \" + sözlük[silinecek])\n",
+        "del sözlük[silinecek]\n",
+        "print(\"silmek istediğiniz kelime silindi\")\n",
+        "print(sözlük)\n",
+        "güncelleme = input(\"güncellemek istediğiniz kelimeyi girirniz: \")\n",
+        "print(\" güncellenecek kelime: \" + sözlük[güncelleme])\n",
+        "güncelicerik = input(\" güncel kelime bilgisi giriniz\")\n",
+        "sözlük[güncelleme] = güncelicerik\n",
+        "print(\"güncelleme tamamlandı\")\n",
+        "print(sözlük)\n",
+        "aranankelime = input(\"aramak istediğiniz kelimeyi girirniz: \")\n",
+        "print(sözlük[aranankelime])\n"
+      ]
+    }
+  ]
+}
